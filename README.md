@@ -1,11 +1,18 @@
 # Interceptor
 
 Copy files :
+
 https://github.com/alfonsoara/http-interceptors-angular4/blob/master/src/core/http.factory.ts
 https://github.com/alfonsoara/http-interceptors-angular4/blob/master/src/core/http.service.ts
 
-Inject files in app.module.ts and @NgModule
+Update http Inject:
+
+`import {HttpModule, Http, XHRBackend, RequestOptions} from '@angular/http';`
+
+Inject files in app.module.ts and @NgModule:
+
 `import { HttpService } from '{route}/http.service.ts`
+
 `import { httpFactory } from '{route}/http.factory.ts`
 ```
   providers: [
