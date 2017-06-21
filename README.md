@@ -5,7 +5,7 @@ Copy files :
 https://github.com/alfonsoara/http-interceptors-angular4/blob/master/src/core/http.factory.ts
 https://github.com/alfonsoara/http-interceptors-angular4/blob/master/src/core/http.service.ts
 
-Update http Inject:
+Update http Inject in app.module.ts
 
 `import {HttpModule, Http, XHRBackend, RequestOptions} from '@angular/http';`
 

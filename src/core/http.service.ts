@@ -138,6 +138,17 @@ export class HttpService extends Http {
       if (options.headers == null) {
         options.headers = new Headers();
       }
+
+      let Mytoken = sessionStorage.getItem('token-aop');
+
+      if(Mytoken){
+
+        options.headers.append('Content-Type', 'myheader');
+        options.headers.append('Autehtication', 'Bearer' +  Mytoken);
+      }else {
+        options.headers.append('Content-Type', 'esau');
+      }
+
       return options;
     }
 
