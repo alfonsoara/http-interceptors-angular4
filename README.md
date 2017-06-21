@@ -1,5 +1,46 @@
 # Interceptor
 
+Copy files :
+https://github.com/alfonsoara/http-interceptors-angular4/blob/master/src/core/http.factory.ts
+https://github.com/alfonsoara/http-interceptors-angular4/blob/master/src/core/http.service.ts
+
+Inject files in app.module.ts and @NgModule
+`import { HttpService } from '{route}/http.service.ts`
+`import { httpFactory } from '{route}/http.factory.ts`
+```
+  providers: [
+    {
+      provide: HttpService,
+      useFactory: httpFactory,
+      deps: [ XHRBackend, RequestOptions]
+    }
+  ],
+```
+Finally use in your service
+
+```
+import { Injectable } from '@angular/core';
+import { Http, Headers} from '@angular/http';
+import { Observable } from 'rxjs/Rx';
+import 'rxjs/add/operator/map';
+
+import { HttpService } from '../../core/http.service';
+
+@Injectable()
+export class HomeService {
+  constructor(
+    private http: HttpService
+  ) {  }
+
+  getTodos() {
+    return this.http.get('todos')
+  }
+}
+
+```
+
+If it does not work remember to download the example
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
 
 ## Development server
