@@ -2,8 +2,8 @@
 
 Copy files :
 
-https://github.com/alfonsoara/http-interceptors-angular4/blob/master/src/core/http.factory.ts
-https://github.com/alfonsoara/http-interceptors-angular4/blob/master/src/core/http.service.ts
+https://github.com/alfonsoara/http-interceptors-angular4/blob/master/src/app/core/http.factory.ts
+https://github.com/alfonsoara/http-interceptors-angular4/blob/master/src/app/core/http.service.ts
 
 Update http Inject in app.module.ts
 
